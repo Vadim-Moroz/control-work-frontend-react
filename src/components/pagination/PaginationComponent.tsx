@@ -3,7 +3,7 @@ import {useSearchParams} from "react-router-dom";
 const PaginationComponent = () => {
     const [query,setQuery]=useSearchParams({page:'1'})
     return (
-        <div>
+        <div className="PageButtons">
             <button onClick={()=>{
                 const page = query.get('page')
                 if(page){

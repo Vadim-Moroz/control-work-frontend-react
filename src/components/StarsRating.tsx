@@ -1,11 +1,12 @@
 import type {FC} from "react";
+import './style/StarsRating.css'
 
 type PropsRatingType ={
     rating: number
 }
 const StarsRating:FC<PropsRatingType> = ({rating}) => {
     return (
-        <div>
+        <div className="rating">
             {rating}
         </div>
     );

@@ -1,7 +1,7 @@
 import type {FC} from "react";
 
 type PropsGenreType ={
-    genreId:number
+    genreId:string
 }
 
 const GenreBadge:FC<PropsGenreType> = ({genreId}) => {
