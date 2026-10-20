@@ -1,5 +1,5 @@
 import {createAsyncThunk} from "@reduxjs/toolkit";
-import {getGenre, getMovies, searchMovies} from "../services/api.service.tsx";
+import {getGenre, getGenres, getMovies, searchMovies} from "../services/api.service.tsx";
 
 export const loadMovies = createAsyncThunk(
     'movieSlice/loadMovie',
@@ -35,4 +35,14 @@ export const genreMovie = createAsyncThunk(
         }
     }
 )
+export const loadGenres = createAsyncThunk(
+    "movieSlice/loadGenres",
+    async (_, thunkAPI) => {
+        try {
+            return await getGenres();
+        } catch (e) {
+            return thunkAPI.rejectWithValue(e);
+        }
+    }
+);
 

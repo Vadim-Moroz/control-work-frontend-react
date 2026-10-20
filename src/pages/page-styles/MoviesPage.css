@@ -1,8 +1,10 @@
 .MoviesPage{
     background-color: #73bc87;
-    display: inline-block;
-    align-items: center;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .PageButtons {

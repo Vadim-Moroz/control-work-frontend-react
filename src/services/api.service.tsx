@@ -46,3 +46,7 @@ export const getGenre = async (page: string, genre: number,sortType:string | nul
     const {data} = await axiosInstance.get(`3/discover/movie?page=${page}&with_genres=${genre+''}&sort_by=${sortBy}`);
     return data.results;
 };
+export const getGenres = async () => {
+    const { data } = await axiosInstance.get("3/genre/movie/list");
+    return data.genres;
+};
