@@ -10,7 +10,7 @@ import {movieSliceActions} from "../slices/MovieSlice.tsx";
 
 const MoviesPage = () => {
     const [query]=useSearchParams()
-    const {movies, sortType,searchMovieText,genres} = useAppSelector(({movieSlice}) => movieSlice);
+    const {movies, sortType,searchMovieText,genres,loading, error} = useAppSelector(({movieSlice}) => movieSlice);
     const dispatch = useAppDispatch();
     const page = query.get("page")||"1";
 
@@ -36,6 +36,8 @@ const MoviesPage = () => {
     return (
         <div className="MoviesPage">
             <PaginationComponent/>
+            {loading && <p>Завантаження фільмів...</p>}
+            {error && <p>Помилка: {error}</p>}
             <MoviesList movies={movies} sortType={sortType} />
             <PaginationComponent/>
         </div>

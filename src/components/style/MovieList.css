@@ -83,3 +83,16 @@
 .genreMenu button:hover {
     background-color: #444;
 }
+.findform{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+.cleanButton{
+    border: none;
+    width: 110px;
+    border-radius: 10px;
+    cursor: pointer;
+    height: 52px;
+}
